@@ -181,3 +181,33 @@ header .menuOpen{
     0% {stroke-dashoffset: 44;}
     100%{stroke-dashoffset: 0;}
 }
+
+/* con 01 */
+.con01{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.con01 .videoWrap video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;      /*가로세로 비율 유지*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.con01 .title{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.con01 .title h2{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
