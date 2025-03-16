@@ -97,3 +97,12 @@ $(function(){
     .to('.con02 .title .a', {x:'-100%', ease:'none', duration:5},0)
     .to('.con02 .title .b', {x:'100%', ease:'none', duration:5},0)
 })
+
+//simplyscroll
+$(function(){
+    $(".con03 .list").simplyScroll({
+        speed : 4,
+        pauseOnHover : false,
+        pauseOnTouch : false
+    })
+})
