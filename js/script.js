@@ -1,3 +1,5 @@
+$(document).on('click','a[href="#"]', function(e){e.preventDefault();})
+
 $(function(){
     Splitting();
 });
@@ -104,5 +106,13 @@ $(function(){
         speed : 4,
         pauseOnHover : false,
         pauseOnTouch : false
+    })
+})
+
+$(function(){
+    $('.menuOpen').on('click', function(){
+        $('.gnb').toggleClass('on');
+        $(this).toggleClass('on');
+        $('body').toggleClass('on');
     })
 })

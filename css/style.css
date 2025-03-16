@@ -51,7 +51,6 @@ body{
     overflow: hidden;
     background-color: #000;
     color: #fff;
-    margin-bottom: 30000px;
 }
 
 /* header */
@@ -206,7 +205,7 @@ header .menuOpen{
     color: #fff;
 }
 .con01 .title h2{
-    font-size: 80px;
+    font-size: 7vw;
     font-weight: 400;
     letter-spacing: -2px;
     line-height: 1.2;
@@ -289,6 +288,7 @@ header .menuOpen{
 
 .con02 .workList li a:hover .imgBox::before{opacity: 1; z-index: 2;}
 .con02 .workList li a:hover .imgBox::after{width:168px; height: 168px;}
+.con02 .workList li a:hover .imgBox img{filter: brightness(50%);}
 
 /* .con03 */
 .con03{
@@ -368,10 +368,153 @@ header .menuOpen{
 }
 
 .con03.motion .simply-scroll .simply-scroll-clip{
-    transform: rotate(5deg) translate(0%, 400px) scale(1.1);
+    transform: rotate(5deg) translate(0%, 150%) scale(1.1);
     opacity: 1;
     transition: 1.2s;
     transition-delay: 0.3s;
 }
 .con03.motion .btnWrap{right: 50%; transition: 1.2s;}
 .con03.motion .textWrap ul li p{animation-name: textAni; animation-duration: 1.3s;}
+
+/*footer*/
+footer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+footer .textWrap{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    font-size: 150px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+footer .textWrap .title{font-size: 20px; margin-bottom: 30px; padding-left: 15px;}
+footer .textWrap .contact{margin-bottom: 10px;}
+footer .textWrap a{display: block; margin-top: -30px; letter-spacing: -2px; font-size: 130px;}
+footer .bottom{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-sizing: border-box;
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+footer .bottom .sns{display: flex;}
+footer .bottom .sns li {margin-right: 30px;}
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */
+@media screen and (max-width:1650px) {
+    .visual .svgAni {top:17%}
+    .con03.motion .btnWrap{right: 10%;}
+    footer .textWrap a{font-size: 100px;}
+}
+
+/* tablet 1025px ~ 1300px */
+@media screen and (max-width:1300px) {
+    .visual .mainText{font-size: 11vw; width: 100%;}
+    .visual .svgAni{width: 56%; top: 39%; transform: rotate(-40deg); right: -5%;}
+    .contact {font-size: 120px;}
+    footer .textWrap a{font-size: 80px;}
+}
+
+/* 801px ~ 1024px */
+@media screen and (max-width:1024px) {
+    .visual .svgAni{width: 76%; top: 39%; transform: rotate(-40deg); right: -5%;}
+    .con02 .title{font-size: 18vw;}
+    .con02 .workList{width: 90%;}
+    .con03 .textWrap{width: 85%;}
+    .con03 .textWrap ul{font-size: 80px;}
+    .contact {font-size: 11vw;}
+    footer .textWrap {line-height: 1.2;}
+    footer .textWrap a{font-size: 8vw;}
+    footer .bottom{font-size: 2vw;}
+}
+
+/* 501px ~ 800px */
+@media screen and (max-width:800px) {
+    .wrap{font-size: 16px;}
+    header{padding: 3% 5%;}
+    header .menuOpen{
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 10px;
+        margin-top: 10px;
+        transition: top .5s;
+        z-index: 101;
+    }
+    header .menuOpen span.a{position: absolute; left: 0; top: 0; width: 100%; height: 1px; background-color: #fff; transition: .3s;}
+    header .menuOpen span.b{position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #fff; transition: .3s;}
+    .gnb{
+        position: fixed;
+        width: 0%;
+        height: 0%;
+        overflow: hidden;
+        background: #fff;
+        left: 0%;
+        top: -100%;
+        color: #000;
+        z-index: 100;
+        transition: top 0.5s;
+    }
+    .gnb ul {display: block; width: 80%; margin: 15% auto;}
+    .gnb ul li{margin-left: 0;}
+    .gnb ul li a{font-size: 15vw; line-height: 1.4; letter-spacing: -1px;}
+    .gnb ul li:nth-child(2) a{font-family: 'Cormorant Infant',serif;}
+    .gnb ul li a .char{color: #000; overflow: inherit;}
+    .gnb ul li a .char:before, .gnb ul li a .char:after{display: none;}
+
+    .gnb.on{width: 100%; height: 100vh; top: 0;}
+    body.on{overflow: hidden;}
+    header .menuOpen.on span.a{background-color: #000; transform: rotate(45deg) translate(5px, 5px);}
+    header .menuOpen.on span.b{background-color: #000; transform: rotate(-45deg) translate(2px, -1px);}
+
+    .visual .svgAni{right: 2%;}
+    .visual .scroll{left: 5%; bottom: 2%;}
+    .visual .mainText{margin-left: 30px;}
+    .con02 .workList li{width: 100%; margin-top: 0; margin-bottom: 30px;}
+    .con02 .workList li a .imgBox::before{display: none;}
+    .con02 .workList li a .imgBox::after{display: none;}
+    .con02 .title .en2{font-size: 20vw;}
+    .con03 .btnWrap a{width: 90px; height: 90px;}
+    .con03 .btnWrap a::before{display: none;}
+    .con03 .btnWrap a:hover{border-color: #fff;}
+    .con03 .btnWrap a img:nth-child(2) {display: none;}
+    .con03.motion .simply-scroll .simply-scroll-clip{transform: rotate(10deg) translate(20%, 300px) scale(1.2);}
+    .simply-scroll .simply-scroll-clip .simply-scroll-list li{width: 200px;}
+    .con03 .textWrap ul {font-size: 14vw;}
+
+    footer{height: 50vh;}
+    footer .textWrap{width: 90%; padding: 0; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+    footer .textWrap .title{padding-left: 0;}
+    footer .textWrap .contact{margin-bottom: 35px;}
+    footer .bottom{font-size: 12px; padding: 0 40px;}
+}
+
+/* 401 ~ 500px */
+@media screen and (max-width:500px) {
+    .visual .svgAni{width: 100%; right: -6px; top: 45%;}
+    footer .bottom{font-size: 12px; padding: 0 20px;}
+    footer .bottom .sns li{margin-right: 10px;}
+}
+
+/* 301 ~ 400px */
+@media screen and (max-width:400px) {
+    .visual .mainText{font-size: 13vw; right: -2px; top: 30%;}
+    .visual .svgAni{width: 90%; top: 55%;}
+    .visual .scroll{font-size: 5vw;}
+    .con02 .workList li a .textBox h3 {font-size: 6vw;}
+    .con02 .workList li a .textBox .info {font-size: 4vw;}
+    footer .textWrap .title{font-size: 4vw;}
+    .con03.motion .simply-scroll .simply-scroll-clip{transform: rotate(10deg) translate(20%, 300px) scale(1.2);}
+}
